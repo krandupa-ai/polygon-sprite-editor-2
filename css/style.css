@@ -1,0 +1,174 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    user-select: none;
+}
+
+/* Верхний тулбар */
+.toolbar {
+    background-color: #2d2d2d;
+    border-bottom: 1px solid #3d3d3d;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    gap: 20px;
+    z-index: 10;
+}
+
+.tabs {
+    display: flex;
+    height: 100%;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    color: #888;
+    padding: 0 20px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    height: 100%;
+    border-bottom: 2px solid transparent;
+    transition: all 0.15s ease;
+}
+
+.tab-btn:hover { color: #fff; }
+.tab-btn.active {
+    color: #007acc;
+    border-bottom-color: #007acc;
+    background-color: #242424;
+}
+
+.btn-primary {
+    background-color: #007acc;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btn-primary:hover { background-color: #0098ff; }
+.status-text { font-size: 12px; color: #888; }
+
+/* Главный контейнер */
+.main-container {
+    flex: 1;
+    display: flex;
+    position: relative;
+}
+
+/* Боковая панель */
+.sidebar {
+    width: 280px;
+    background-color: #252526;
+    border-right: 1px solid #3d3d3d;
+    display: flex;
+    flex-direction: column;
+    z-index: 5;
+}
+
+.sidebar-section {
+    padding: 15px;
+    border-bottom: 1px solid #3d3d3d;
+}
+
+.sidebar-section h3 {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+/* Контейнеры списков */
+.list-container {
+    height: 150px;
+    overflow-y: auto;
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.list-item {
+    padding: 8px 12px;
+    font-size: 13px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.list-item:hover { background-color: #2a2d2e; }
+.list-item.selected { background-color: #094771; color: #fff; }
+
+/* Поля ввода */
+.joint-tag-input-group {
+    display: flex;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.input-text {
+    flex: 1;
+    background-color: #1e1e1e;
+    border: 1px solid #444;
+    color: #fff;
+    padding: 4px 8px;
+    font-size: 12px;
+    border-radius: 3px;
+    outline: none;
+}
+.input-text:focus { border-color: #007acc; }
+
+.btn-add-tag {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Область холста */
+.workspace {
+    flex: 1;
+    position: relative;
+    background-color: #141414;
+    overflow: hidden;
+}
+
+canvas {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    display: block;
+}
+
+.zoom-overlay {
+    position: absolute;
+    bottom: 15px; right: 15px;
+    background: rgba(0,0,0,0.6);
+    padding: 4px 8px;
+    font-size: 11px;
+    border-radius: 3px;
+    pointer-events: none;
+    color: #aaa;
+}
+.btn-small.selected { background-color: #007acc; color: #fff; border-color: #007acc; }
+
+/* Находим и заменяем/добавляем в css/style.css */
+#fileInput, #importInput {
+    display: none !important;
+}
