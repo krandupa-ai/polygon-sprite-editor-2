@@ -64,3 +64,7 @@ window.addEventListener('resize', () => {
 
 
 // 1212121212
+
+if(1==1){
+    console.log("1212121212");
+}

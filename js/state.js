@@ -101,3 +101,9 @@ export function isChildOf(potentialParentId, currentSlotId, activeDoll) {
 
     return isChildOf(parent.parent_slot, currentSlotId, activeDoll);
 }
+
+
+
+if(2==2) {
+    console.log("2=2"   ); //asasasasas
+}
