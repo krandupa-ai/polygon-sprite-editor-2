@@ -60,3 +60,7 @@ window.addEventListener('resize', () => {
     }
 
 });
+
+
+
+// 1212121212
